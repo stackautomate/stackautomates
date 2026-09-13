@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Demo | Stack Automate</title>
+<meta name="description" content="Book a friendly, zero-pressure demo of Stack Automate's WhatsApp automation and website chatbot solutions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css">
+<style>
+.demo-hero{position:relative;overflow:hidden;padding:72px 0 96px}
+.demo-hero .hero-bg-grid{z-index:0}
+.demo-hero .hero-glow{top:-260px;left:15%;width:720px;height:520px}
+.demo-layout{position:relative;z-index:1;display:grid;grid-template-columns:minmax(280px,.78fr) minmax(420px,1.22fr);gap:72px;align-items:start}
+.demo-intro{padding-top:32px}
+.demo-intro h1{font-size:clamp(34px,4.6vw,58px);max-width:650px;margin-bottom:22px}
+.demo-intro h1 .highlight{color:var(--accent)}
+.demo-intro .lead{font-size:18px;color:var(--text-muted);max-width:535px;margin-bottom:42px}
+.expect-list{display:grid;gap:28px}
+.expect-item{display:grid;grid-template-columns:42px 1fr;gap:16px;align-items:start}
+.expect-number{width:42px;height:42px;border:1px solid rgba(16,185,129,.35);border-radius:12px;background:rgba(16,185,129,.1);display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:14px;font-weight:800}
+.expect-item h2{font-size:16px;margin:1px 0 6px}
+.expect-item p{color:var(--text-muted);font-size:14px;line-height:1.65}
+.form-panel{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:36px;box-shadow:0 24px 70px rgba(0,0,0,.24)}
+.form-heading{display:flex;justify-content:space-between;gap:20px;align-items:start;margin-bottom:30px}
+.form-heading h2{font-size:24px;margin-bottom:7px}
+.form-heading p{color:var(--text-muted);font-size:14px}
+.form-status{color:var(--accent);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;padding-top:4px}
+.demo-form{display:grid;gap:21px}
+.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field-grid>.field{align-self:start;align-content:start}
+.field{display:grid;gap:8px}
+.field label{font-size:13px;font-weight:600;color:var(--text)}
+.field label span{color:var(--accent)}
+.field input,.field select,.field textarea{width:100%;min-height:48px;padding:12px 14px;border:1px solid rgba(243,244,246,.14);border-radius:9px;background:#121824;color:var(--text);font:inherit;font-size:14px;outline:none;transition:border-color var(--transition),box-shadow var(--transition),background var(--transition)}
+.field input::placeholder{color:#687384}
+.field textarea{min-height:112px;resize:vertical;line-height:1.5}
+.field textarea::placeholder{color:#687384}
+.field select{appearance:auto;color:var(--text-muted)}
+.field select:valid{color:var(--text)}
+.field input:hover,.field select:hover,.field textarea:hover{border-color:rgba(16,185,129,.45)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);background:#151e2b;box-shadow:0 0 0 3px rgba(16,185,129,.13)}
+.field input:focus:invalid,.field select:focus:invalid,.field textarea:focus:invalid{border-color:#f59e0b;box-shadow:0 0 0 3px rgba(245,158,11,.12)}
+.field input:valid:not(:placeholder-shown),.field select:valid,.field textarea:valid:not(:placeholder-shown){border-color:rgba(16,185,129,.5)}
+.iti{width:100%}
+.iti,.iti input[type="tel"],.iti__country-list,.iti__country,.iti__selected-dial-code{font-size:14px}
+.field .iti input[type="tel"]{padding-left:88px}
+.iti__selected-flag{color:var(--text)}
+.iti__selected-dial-code{color:var(--text)}
+.iti__country-list{background:var(--bg-elevated);border-color:var(--border);color:var(--text);box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.iti__country:hover,.iti__country.iti__highlight{background:rgba(16,185,129,.12)}
+.iti__dial-code{color:var(--text-muted)}
+.multiselect{position:relative;width:100%}
+.multiselect-display{display:flex;align-items:center;gap:8px;min-height:48px;width:100%;padding:7px 40px 7px 12px;border:1px solid rgba(243,244,246,.14);border-radius:9px;background:#121824;color:var(--text-muted);font:inherit;font-size:14px;text-align:left;cursor:pointer;transition:border-color var(--transition),box-shadow var(--transition),background var(--transition)}
+.multiselect-display:hover,.multiselect.is-open .multiselect-display{border-color:var(--accent);background:#151e2b;box-shadow:0 0 0 3px rgba(16,185,129,.13)}
+.multiselect-display::after{content:'⌄';position:absolute;right:15px;top:10px;color:var(--accent);font-size:19px;line-height:24px;transition:transform var(--transition)}
+.multiselect.is-open .multiselect-display::after{transform:rotate(180deg)}
+.multiselect-placeholder{color:#687384}
+.multiselect-tags{display:flex;flex-wrap:wrap;gap:6px;align-items:center;width:100%}
+.multiselect-tag{display:inline-flex;align-items:center;gap:6px;max-width:100%;padding:4px 7px 4px 9px;border:1px solid rgba(16,185,129,.45);border-radius:6px;background:rgba(16,185,129,.1);color:var(--text);font-size:12px;line-height:1.35}
+.multiselect-tag span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.multiselect-tag button{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;padding:0;border:0;border-radius:50%;background:transparent;color:var(--accent);font-size:15px;line-height:1;cursor:pointer}
+.multiselect-tag button:hover{background:rgba(16,185,129,.2);color:var(--text)}
+.multiselect-dropdown-panel{position:absolute;top:calc(100% + 8px);left:0;right:0;z-index:100;display:grid;grid-template-columns:1fr;gap:6px;max-height:270px;overflow-y:auto;padding:8px;background:var(--bg-card);border:1px solid var(--border);border-radius:9px;box-shadow:0 18px 40px rgba(0,0,0,.4);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity var(--transition),transform var(--transition),visibility var(--transition)}
+.multiselect.is-open .multiselect-dropdown-panel{opacity:1;visibility:visible;transform:translateY(0)}
+.challenge-option{display:flex;align-items:center;gap:10px;padding:10px 11px;border:1px solid transparent;border-radius:7px;background:transparent;color:var(--text-muted);font-size:13px;line-height:1.4;cursor:pointer;transition:border-color var(--transition),background var(--transition),color var(--transition)}
+.challenge-option:hover{border-color:rgba(16,185,129,.28);background:rgba(16,185,129,.07);color:var(--text)}
+.challenge-option input{width:16px;height:16px;min-height:16px;padding:0;border:0;border-radius:4px;background:transparent;accent-color:var(--accent);cursor:pointer}
+.challenge-option:has(input:checked){border-color:rgba(16,185,129,.38);background:rgba(16,185,129,.1);color:var(--text)}
+.challenge-option:has(input:focus-visible){outline:2px solid rgba(16,185,129,.45);outline-offset:1px}
+.helper-text{color:var(--text-muted);font-size:12px;line-height:1.5}
+#other-challenge-text-container{max-height:0;margin-top:20px;overflow:hidden;opacity:0;transform:translateY(-6px);transition:max-height var(--transition),opacity var(--transition),transform var(--transition)}
+#other-challenge-text-container.is-visible{max-height:240px;margin-top:20px;opacity:1;transform:translateY(0)}
+.form-note{display:flex;gap:10px;align-items:flex-start;padding-top:3px;color:var(--text-muted);font-size:12px;line-height:1.55}
+.form-note::before{content:'*';color:var(--accent);font-weight:800}
+.form-submit{width:100%;min-height:52px;font-size:15px;margin-top:2px}
+.privacy-note{text-align:center;color:#778293;font-size:11px;line-height:1.5}
+.demo-footer-note{padding:0 0 88px;background:var(--bg)}
+.demo-footer-note p{max-width:720px;margin:0 auto;text-align:center;color:var(--text-muted);font-size:14px}
+.demo-footer-note strong{color:var(--text);font-weight:600}
+@media(max-width:900px){.demo-layout{grid-template-columns:1fr;gap:48px}.demo-intro{padding-top:0}.demo-intro h1{max-width:700px}.demo-intro .lead{margin-bottom:32px}.expect-list{grid-template-columns:repeat(3,1fr);gap:18px}.expect-item{display:block}.expect-number{margin-bottom:13px}}
+@media(max-width:600px){.demo-hero{padding:52px 0 64px}.demo-layout{gap:38px}.demo-intro h1{font-size:clamp(32px,10vw,44px)}.demo-intro .lead{font-size:16px}.expect-list{grid-template-columns:1fr;gap:22px}.expect-item{display:grid}.expect-number{margin-bottom:0}.form-panel{padding:24px 18px}.form-heading{display:block;margin-bottom:25px}.form-status{display:block;margin-top:10px}.field-grid{grid-template-columns:1fr;gap:21px}.demo-footer-note{padding:0 0 64px}}
+</style>
+</head>
+<body>
+<header>
+	<div class="nav-wrap">
+		<a href="index.html" class="logo">
+			<svg class="logo-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#10B981" fill-opacity="0.10"/><circle cx="12" cy="14" r="3.4" fill="#10B981"/><circle cx="28" cy="14" r="3.4" fill="#10B981" fill-opacity="0.55"/><circle cx="20" cy="26" r="3.4" fill="#10B981"/><path d="M12 14L20 26L28 14" stroke="#10B981" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14L28 14" stroke="#10B981" stroke-width="1.6" stroke-linecap="round" stroke-opacity="0.4"/></svg>
+			<span class="logo-text">STACK <span>AUTOMATE</span></span>
+		</a>
+		<nav class="nav-links" id="navLinks">
+			<a href="index.html">Home</a>
+			<a href="about.html">About</a>
+			<div class="nav-dropdown"><a href="services.html" class="nav-dropdown-toggle">Services</a><div class="nav-dropdown-menu"><a href="whatsapp-automation.html">WhatsApp Automation</a><a href="chatbot-development.html">Chatbot Development</a><a href="whatsapp-marketing.html">WhatsApp Marketing</a></div></div>
+			<div class="nav-dropdown"><a href="solutions.html" class="nav-dropdown-toggle">Solutions</a><div class="nav-dropdown-menu"><a href="solutions/retail-automation.html">Retail</a><a href="solutions/financial-services-automation.html">Financial Services</a><a href="solutions/healthcare-automation.html">Healthcare</a><a href="solutions/restaurants-automation.html">Restaurants</a></div></div><a href="contact.html">Contact</a>
+			<div class="mobile-menu-items"><a href="book-demo.html" class="btn btn-primary" aria-current="page">Book a Demo</a></div>
+		</nav>
+		<div class="nav-cta"><a href="book-demo.html" class="btn btn-primary" aria-current="page">Book a Demo</a></div>
+		<button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
+	</div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="breadcrumb"><div class="container"><a href="index.html">Home</a> <span>/</span> <span>Book a Demo</span></div></div>
+
+<main>
+	<section class="demo-hero">
+		<div class="hero-bg-grid"></div><div class="hero-glow"></div>
+		<div class="container">
+			<div class="demo-layout">
+				<div class="demo-intro">
+					<span class="eyebrow">A practical next step</span>
+					<h1>See How WhatsApp Automation <span class="highlight">Saves Hours Every Day.</span></h1>
+					<p class="lead">Bring us your biggest customer communication bottleneck. We will show you exactly what a simple, tailored automation could do for your business.</p>
+					<div class="expect-list" aria-label="What to expect on the demo call">
+						<article class="expect-item"><div class="expect-number">01</div><div><h2>15-Minute Zero-Pressure Call</h2><p>A friendly walkthrough tailored completely to your business scale.</p></div></article>
+						<article class="expect-item"><div class="expect-number">02</div><div><h2>Live Interactive Demo</h2><p>Watch a custom chatbot operate on your own phone in real-time.</p></div></article>
+						<article class="expect-item"><div class="expect-number">03</div><div><h2>Strategic Automation Roadmap</h2><p>Receive a tailored 7-day deployment blueprint for your brand.</p></div></article>
+					</div>
+				</div>
+
+				<div class="form-panel">
+					<div class="form-heading"><div><h2>Tell us a little about your business</h2><p>We will use your answers to make the demo relevant from minute one.</p></div><span class="form-status">Free consultation</span></div>
+					<!-- For GitHub Pages Migration: Comment out the Netlify form tag above, and uncomment the Make Webhook form tag below -->
+                        <form action="https://hook.eu1.make.com/1vzne3nf8andh7b3g5h8xu3m4dzsgfva" method="POST" class="demo-form">
+                        <!-- <form name="book-demo" method="POST" data-netlify="true" class="demo-form">
+                            <input type="hidden" name="form-name" value="book-demo" />-->
+						<div class="field-grid">
+							<div class="field"><label for="fullname">Full Name <span aria-hidden="true">*</span></label><input type="text" id="fullname" name="fullname" placeholder="e.g. Priya Sharma" autocomplete="name" autofocus required></div>
+							<div class="field"><label for="email">Business Email <span aria-hidden="true">*</span></label><input type="email" id="email" name="email" placeholder="you@yourbusiness.com" autocomplete="email" required></div>
+						</div>
+						<div class="field"><label for="whatsapp">WhatsApp Number <span aria-hidden="true">*</span></label><input type="tel" id="whatsapp" name="whatsapp" placeholder="e.g. 983-388-9806" autocomplete="tel" inputmode="tel" required><small class="helper-text">Required to instantly trigger and experience your live WhatsApp automation preview. 100% NO SPAM.</small></div>
+						<div class="field"><label id="challenge-label">Main Business Challenge <span aria-hidden="true">*</span></label><div class="multiselect" id="challenge-multiselect"><button type="button" class="multiselect-display" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="challenge-label"><span class="multiselect-placeholder">Choose your challenges...</span><span class="multiselect-tags" aria-live="polite"></span></button><div class="multiselect-dropdown-panel" role="listbox" aria-multiselectable="true"><label class="challenge-option"><input type="checkbox" name="challenge_option" value="Missing customer messages when closed">Missing customer messages when closed</label><label class="challenge-option"><input type="checkbox" name="challenge_option" value="Want to automate stock checks &amp; pricing info">Want to automate stock checks &amp; pricing info</label><label class="challenge-option"><input type="checkbox" name="challenge_option" value="Want to run targeted WhatsApp marketing campaigns">Want to run targeted WhatsApp marketing campaigns</label><label class="challenge-option"><input type="checkbox" name="challenge_option" value="Need a 24/7 interactive website chatbot">Need a 24/7 interactive website chatbot</label><label class="challenge-option"><input type="checkbox" name="challenge_option" value="Other Challenge">Other Challenge</label></div></div><div id="other-challenge-text-container" style="display: none; margin-top: 20px;"><label for="other-challenge-details">Please describe your specific challenge <span aria-hidden="true">*</span></label><textarea id="other-challenge-details" name="other_challenge_details" placeholder="Tell us a little more about what you want to automate..."></textarea></div></div>
+						<p class="form-note">All fields are required so we can prepare a useful, relevant preview for your business.</p>
+						<button type="submit" class="btn btn-primary form-submit">Request My Demo <span aria-hidden="true">&#8594;</span></button>
+						<p class="privacy-note">Your information is only used to arrange your demo and prepare your preview.</p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="demo-footer-note"><div class="container"><p>No technical skills or coding required from your end. We manage 100% of the architecture and infrastructure setup.</p></div></section>
+</main>
+
+<footer><div class="container"><div class="footer-top"><div class="footer-brand"><a href="index.html" class="logo"><svg class="logo-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#10B981" fill-opacity="0.10"/><circle cx="12" cy="14" r="3.4" fill="#10B981"/><circle cx="28" cy="14" r="3.4" fill="#10B981" fill-opacity="0.55"/><circle cx="20" cy="26" r="3.4" fill="#10B981"/><path d="M12 14L20 26L28 14" stroke="#10B981" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14L28 14" stroke="#10B981" stroke-width="1.6" stroke-linecap="round" stroke-opacity="0.4"/></svg><span class="logo-text">STACK <span>AUTOMATE</span></span></a><p>Simple, friendly business automation solutions that help small businesses reply faster and never miss a customer.</p></div><div class="footer-col"><h4>Company</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="solutions.html">Solutions</a></li><li><a href="contact-us.html">Contact</a></li></ul></div><div class="footer-col"><h4>Services</h4><ul><li><a href="whatsapp-automation.html">WhatsApp Automation</a></li><li><a href="chatbot-development.html">Chatbot Development</a></li><li><a href="whatsapp-marketing.html">WhatsApp Marketing</a></li></ul></div><div class="footer-col"><h4>Solutions</h4><ul><li><a href="solutions/retail-automation.html">Retail</a></li><li><a href="solutions/financial-services-automation.html">Financial Services</a></li><li><a href="solutions/healthcare-automation.html">Healthcare</a></li><li><a href="solutions/restaurants-automation.html">Restaurants</a></li></ul></div></div><div class="footer-bottom"><p>© 2026 Stack Automate. All rights reserved.</p><div class="footer-legal"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-and-conditions.html">Terms &amp; Conditions</a></div></div></div></footer>
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInput.min.js"></script>
+<script>
+const demoForm = document.querySelector('.demo-form');
+const phoneNumber = document.getElementById('whatsapp');
+const iti = window.intlTelInput(phoneNumber, {
+	initialCountry: 'in',
+	separateDialCode: true,
+	utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/utils.js'
+});
+const challengeOptions = document.querySelectorAll('input[name="challenge_option"]');
+const challengeMultiselect = document.getElementById('challenge-multiselect');
+const challengeDisplay = challengeMultiselect.querySelector('.multiselect-display');
+const challengePlaceholder = challengeMultiselect.querySelector('.multiselect-placeholder');
+const challengeTags = challengeMultiselect.querySelector('.multiselect-tags');
+const otherChallengeOption = document.querySelector('input[name="challenge_option"][value="Other Challenge"]');
+const otherChallengeContainer = document.getElementById('other-challenge-text-container');
+const otherChallengeDetails = document.getElementById('other-challenge-details');
+
+const renderChallengeTags = () => {
+	const selectedOptions = [...challengeOptions].filter(option => option.checked);
+	challengeTags.innerHTML = '';
+	challengePlaceholder.hidden = selectedOptions.length > 0;
+	selectedOptions.forEach(option => {
+		const tag = document.createElement('span');
+		tag.className = 'multiselect-tag';
+		tag.innerHTML = `<span>${option.value}</span><button type="button" aria-label="Remove ${option.value}">&times;</button>`;
+		tag.querySelector('button').addEventListener('click', event => {
+			event.stopPropagation();
+			option.checked = false;
+			renderChallengeTags();
+			updateChallengeValidity();
+		});
+		challengeTags.appendChild(tag);
+	});
+};
+
+const setChallengePanelOpen = isOpen => {
+	challengeMultiselect.classList.toggle('is-open', isOpen);
+	challengeDisplay.setAttribute('aria-expanded', String(isOpen));
+	// जादू की लाइन: अगर ड्रॉपडाउन बंद हो रहा है और 'Other Challenge' सिलेक्टेड है,
+	// तो एक्स्ट्रा स्पेस को तुरंत कम करके 0px कर दें ताकि लेआउट स्लिक दिखे।
+	if (!isOpen) {
+		challengeMultiselect.style.marginBottom = '0px';
+	} else {
+		// अगर ड्रॉपडाउन वापस खोला जाता है और 'Other' सिलेक्टेड है, तो स्पेस वापस दे दें
+		const isOtherSelected = Array.from(challengeOptions).some(opt => opt.checked && opt.value === 'Other Challenge');
+		if (isOtherSelected) {
+			challengeMultiselect.style.marginBottom = '180px';
+		}
+	}
+};
+
+challengeDisplay.addEventListener('click', () => {
+	setChallengePanelOpen(!challengeMultiselect.classList.contains('is-open'));
+});
+
+challengeOptions.forEach(option => option.addEventListener('change', () => {
+	renderChallengeTags();
+	updateChallengeValidity(); // This forces the layout to re-evaluate immediately on click
+	// यहाँ हमने नया स्पेस एडजस्टमेंट लॉजिक जोड़ दिया है:
+	const isDropdownOpen = challengeMultiselect.classList.contains('is-open');
+	challengeMultiselect.style.marginBottom = isDropdownOpen && otherChallengeOption.checked ? '180px' : '0px';
+}));
+// Force immediate toggle of the textarea on direct checkbox change
+// otherChallengeOption.addEventListener('change', () => {
+	// updateChallengeValidity();
+// });
+
+document.addEventListener('click', event => {
+	if (!challengeMultiselect.contains(event.target)) setChallengePanelOpen(false);
+});
+
+const updateChallengeValidity = () => {
+	const hasSelectedChallenge = [...challengeOptions].some(option => option.checked);
+	challengeOptions.required = !hasSelectedChallenge;
+	const hasOtherChallenge = otherChallengeOption.checked;
+	
+	if (hasOtherChallenge) {
+		// 1. लेआउट डिस्प्ले को तुरंत ब्लॉक पर सेट करें
+		otherChallengeContainer.style.display = 'block';
+		// 2. माइक्रो-टाइमआउट ब्राउज़र को बिना रुके तुरंत एनिमेशन चलाने का निर्देश देता है
+		setTimeout(() => {
+			otherChallengeContainer.classList.add('is-visible');
+		}, 0);
+		otherChallengeDetails.required = true;
+	} else {
+		otherChallengeContainer.classList.remove('is-visible');
+		// 3. एनिमेशन पूरा होने के बाद ही डिस्प्ले को छुपाएं
+		setTimeout(() => {
+			if (!otherChallengeOption.checked) {
+				otherChallengeContainer.style.display = 'none';
+			}
+		}, 200);
+		otherChallengeDetails.required = false;
+		otherChallengeDetails.value = '';
+	}
+};
+
+
+updateChallengeValidity();
+renderChallengeTags();
+// =======================================================
+// sta ULTIMATE UX FIX: Auto-Close & Auto-Focus on 'Other' Click
+// =======================================================
+const observer = new MutationObserver(() => {
+    const isOtherSelected = Array.from(challengeOptions).some(opt => opt.checked && opt.value === 'Other Challenge');
+    const isDropdownOpen = challengeMultiselect.classList.contains('is-open');
+
+    if (isOtherSelected) {
+        otherChallengeContainer.style.display = 'block';
+        setTimeout(() => otherChallengeContainer.classList.add('is-visible'), 10);
+        otherChallengeDetails.required = true;
+        
+        // मास्टरस्ट्रोक: जैसे ही 'Other' सिलेक्ट हो और ड्रॉपडाउन खुला हो, 
+        // तुरंत उसे बंद करें और सीधे टेक्स्ट बॉक्स के अंदर कर्सर को फोकस कर दें।
+        if (isDropdownOpen) {
+            setChallengePanelOpen(false); // ड्रॉपडाउन को ऑटो-क्लोज़ करें
+            setTimeout(() => {
+                otherChallengeDetails.focus(); // कर्सer को ऑटो-फ़ोकस करें
+            }, 150);
+        }
+
+        challengeMultiselect.style.marginBottom = challengeMultiselect.classList.contains('is-open') ? '180px' : '0px';
+    } else {
+        otherChallengeContainer.classList.remove('is-visible');
+        setTimeout(() => {
+            if (!otherChallengeOption.checked) {
+                otherChallengeContainer.style.display = 'none';
+                challengeMultiselect.style.marginBottom = '0px';
+            }
+        }, 200);
+        otherChallengeDetails.required = false;
+    }
+});
+
+// Start listening to the exact visual box where pills appear
+observer.observe(challengeTags, { childList: true, subtree: true });
+demoForm.addEventListener('submit', (event) => {
+	event.preventDefault();
+	const formData = new FormData(demoForm);
+	const internationalNumber = iti.getNumber().replace(/\D/g, '');
+	const selectedChallenges = [...challengeOptions].filter(option => option.checked).map(option => option.value);
+	formData.delete('challenge');
+	formData.delete('challenge_option');
+	formData.delete('other_challenge_details');
+	formData.set('whatsapp', internationalNumber);
+	const challengeDetails = otherChallengeOption.checked ? otherChallengeDetails.value.trim() : '';
+	const challengeString = selectedChallenges.map(challenge => challenge === 'Other Challenge' && challengeDetails ? `${challenge}: ${challengeDetails}` : challenge).join(', ');
+	formData.set('challenge', challengeString);
+
+	fetch(demoForm.action, {
+		method: 'POST',
+		body: formData,
+		mode: 'no-cors'
+	})
+		.then(() => {
+			window.location.href = '/demo-form-submit-success.html';
+		})
+		.catch((error) => {
+			console.error('Demo request could not be sent.', error);
+		});
+});
+</script>
+</body>
+</html>

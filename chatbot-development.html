@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom AI Chatbot Development for Business Websites | Stack Automate</title>
+<meta name="description" content="Stack Automate builds and deploys custom AI website chatbots that answer questions, capture leads, and guide customers to the next step.">
+<meta name="keywords" content="AI chatbot development Nagpur, website chatbot, chatbot for small business, lead generation chatbot, Stack Automate">
+<meta property="og:title" content="Custom AI Chatbot Development | Stack Automate">
+<meta property="og:description" content="Turn your website into an always-available sales and support assistant with a custom AI chatbot built around your business.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/phone-chat.css">
+<style>
+.chatbot-hero .hero-content{max-width:800px;margin:0 auto}
+.chatbot-hero .hero-content h1{max-width:760px;margin:0 auto 20px}
+.chatbot-hero .hero-content p.lead{max-width:680px}
+.chatbot-badge{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border:1px solid var(--border);border-radius:10px;background:rgba(16,185,129,0.08);margin:0 auto 24px}
+.chatbot-badge-mark{width:30px;height:30px;border-radius:8px;background:var(--accent-dim);display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:17px}
+.chatbot-badge span{font-size:13px;font-weight:600;color:var(--text)}
+.benefits-section{background:var(--bg-elevated)}
+.benefits-header{text-align:center;margin:0 auto 56px}
+.benefits-header .section-heading,.benefits-header .section-sub{margin-left:auto;margin-right:auto}
+.benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.benefit-card{min-height:100%}
+.benefit-icon{width:48px;height:48px;margin-bottom:22px}
+.benefit-icon svg{width:24px;height:24px}
+.benefit-card h3{font-size:18px;margin-bottom:12px}
+.benefit-card p{color:var(--text-muted);font-size:14.5px;line-height:1.65}
+.deployment-section{background:var(--bg)}
+.deployment-layout{display:grid;grid-template-columns:0.9fr 1.1fr;gap:72px;align-items:center}
+.deployment-copy h2{font-size:clamp(28px,3.6vw,42px);margin:18px 0}
+.deployment-copy>p{color:var(--text-muted);font-size:16px;line-height:1.7;margin-bottom:28px}
+.deployment-list{display:flex;flex-direction:column;gap:18px}
+.deployment-item{display:flex;gap:14px;align-items:flex-start}
+.deployment-item-mark{width:28px;height:28px;flex-shrink:0;border-radius:50%;background:var(--accent-dim);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
+.deployment-item h3{font-size:15px;margin-bottom:4px}
+.deployment-item p{color:var(--text-muted);font-size:13.5px;line-height:1.55}
+.deployment-options{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.deployment-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:28px;min-height:220px}
+.deployment-card.primary{border-color:rgba(16,185,129,0.4);box-shadow:0 18px 45px rgba(0,0,0,0.2)}
+.deployment-card h3{font-size:19px;margin-bottom:12px}
+.deployment-card p{color:var(--text-muted);font-size:14px;line-height:1.65;margin-bottom:20px}
+.deployment-card a{color:var(--accent);font-size:13px;font-weight:600}
+.process-section{background:var(--bg-elevated)}
+.process-header{text-align:center;margin:0 auto 56px}
+.process-header .section-heading,.process-header .section-sub{margin-left:auto;margin-right:auto}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.process-step{position:relative;padding:28px 22px;border-top:2px solid rgba(16,185,129,0.4);background:var(--bg-card);border-radius:0 0 var(--radius) var(--radius)}
+.process-number{color:var(--accent);font-size:13px;font-weight:800;margin-bottom:22px}
+.process-step h3{font-size:17px;margin-bottom:10px}
+.process-step p{color:var(--text-muted);font-size:13.5px;line-height:1.6}
+.fit-note{margin-top:24px;color:var(--text-muted);font-size:13px;line-height:1.6}
+@media(max-width:992px){
+	.benefits-grid{grid-template-columns:repeat(2,1fr)}
+	.deployment-layout{grid-template-columns:1fr;gap:48px}
+	.process-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+	.benefits-grid,.deployment-options,.process-grid{grid-template-columns:1fr}
+	.deployment-card{min-height:auto}
+}
+</style>
+</head>
+<body>
+
+<header>
+	<div class="nav-wrap">
+		<a href="index.html" class="logo">
+			<svg class="logo-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#10B981" fill-opacity="0.10"/><circle cx="12" cy="14" r="3.4" fill="#10B981"/><circle cx="28" cy="14" r="3.4" fill="#10B981" fill-opacity="0.55"/><circle cx="20" cy="26" r="3.4" fill="#10B981"/><path d="M12 14L20 26L28 14" stroke="#10B981" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14L28 14" stroke="#10B981" stroke-width="1.6" stroke-linecap="round" stroke-opacity="0.4"/></svg>
+			<span class="logo-text">STACK <span>AUTOMATE</span></span>
+		</a>
+		<nav class="nav-links" id="navLinks">
+			<a href="index.html">Home</a>
+			<a href="about.html">About</a>
+			<div class="nav-dropdown"><a href="services.html" class="nav-dropdown-toggle">Services</a><div class="nav-dropdown-menu"><a href="whatsapp-automation.html">WhatsApp Automation</a><a href="chatbot-development.html" aria-current="page">Chatbot Development</a><a href="whatsapp-marketing.html">WhatsApp Marketing</a></div></div>
+			<div class="nav-dropdown"><a href="solutions.html" class="nav-dropdown-toggle">Solutions</a><div class="nav-dropdown-menu"><a href="solutions/retail-automation.html">Retail</a><a href="solutions/financial-services-automation.html">Financial Services</a><a href="solutions/healthcare-automation.html">Healthcare</a><a href="solutions/restaurants-automation.html">Restaurants</a></div></div><a href="contact.html">Contact</a>
+			<div class="mobile-menu-items"><a href="contact-us.html" class="btn btn-primary">Book a Demo</a></div>
+		</nav>
+		<div class="nav-cta"><a href="book-demo.html" class="btn btn-primary">Book a Demo</a></div>
+		<button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
+	</div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="breadcrumb"><div class="container"><a href="index.html">Home</a> <span>/</span> <a href="services.html">Services</a> <span>/</span> <span>Chatbot Development</span></div></div>
+
+<main>
+	<section class="hero chatbot-hero">
+		<div class="hero-bg-grid"></div><div class="hero-glow"></div>
+		<div class="container"><div class="hero-inner"><div class="hero-content">
+			<div class="chatbot-badge"><div class="chatbot-badge-mark" aria-hidden="true">✦</div><span>Custom AI Website Chatbots</span></div>
+			<h1>Turn Your Website Into an <span class="highlight">Always-Available Assistant</span></h1>
+			<p class="lead">We build and deploy a helpful chatbot around your business, so visitors can get answers, share their details, and take the next step even when your team is busy.</p>
+			<div class="hero-actions"><a href="#comparison" class="btn btn-primary">See It in Action</a><a href="contact-us.html" class="btn btn-secondary">Book a Demo</a></div>
+		</div></div></div>
+	</section>
+
+	<section class="comparison-section" id="comparison">
+		<div class="container"><h2>See the Difference in Action</h2><div class="phone-comparison">
+			<div class="phone-container"><div class="phone-label without">Without a Chat Assistant</div><div class="phone-mock"><div class="phone-frame"><div class="phone-screen"><div class="phone-status"><span>10:14</span><span>●●●●●</span></div><div class="phone-header" style="background:#1a2233"><div class="phone-avatar">✦</div><div class="phone-header-text"><p class="name">Your Website</p><p class="status">No assistant available</p></div></div><div class="phone-body"><canvas id="canvas-without"></canvas></div><div class="phone-footer"><div class="phone-input-box">Type message...</div><div class="phone-send-btn" style="background:#9ca3af">➤</div></div></div></div></div></div>
+			<div class="phone-container"><div class="phone-label with">With a Chat Assistant</div><div class="phone-mock"><div class="phone-frame"><div class="phone-screen"><div class="phone-status"><span>10:14</span><span>●●●●●</span></div><div class="phone-header"><div class="phone-avatar">✦</div><div class="phone-header-text"><p class="name">Your Website</p><p class="status">Online and ready to help</p></div></div><div class="phone-body"><canvas id="canvas-with"></canvas></div><div class="phone-footer"><div class="phone-input-box">Type message...</div><div class="phone-send-btn">➤</div></div></div></div></div></div>
+		</div></div>
+	</section>
+
+	<section class="benefits-section" id="features"><div class="container">
+		<div class="benefits-header"><span class="eyebrow">What Your Chatbot Can Handle</span><h2 class="section-heading">Useful Conversations, Built Around Your Business</h2><p class="section-sub">Your chatbot is shaped around the information customers need and the actions you want them to take.</p></div>
+		<div class="benefits-grid">
+			<article class="benefit-card"><div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6 2 11c0 2.4 1 4.6 2.6 6.2L3.5 22l5-1.3C9.9 21.5 10.9 21.7 12 21.7c5.5 0 10-4 10-8.7S17.5 2 12 2z" stroke="#10B981" stroke-width="1.6" stroke-linejoin="round"/></svg></div><h3>Answer Common Questions</h3><p>Give visitors clear answers about your services, pricing, timings, location, policies, and availability.</p></article>
+			<article class="benefit-card"><div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16v14H4z" stroke="#10B981" stroke-width="1.6"/><path d="M8 9h8M8 13h5" stroke="#10B981" stroke-width="1.6" stroke-linecap="round"/><path d="M12 19v3" stroke="#10B981" stroke-width="1.6" stroke-linecap="round"/></svg></div><h3>Capture Better Leads</h3><p>Ask for the right details, such as name, phone number, service interest, and preferred time to connect.</p></article>
+			<article class="benefit-card"><div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12h16M12 4v16" stroke="#10B981" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="#10B981" stroke-width="1.6"/></svg></div><h3>Guide the Next Step</h3><p>Direct visitors to a contact form, booking request, quotation enquiry, product page, or your team.</p></article>
+			<article class="benefit-card"><div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#10B981" stroke-width="1.6"/><path d="M12 6v6l4 2.4" stroke="#10B981" stroke-width="1.6" stroke-linecap="round"/></svg></div><h3>Stay Available After Hours</h3><p>Help visitors outside business hours with useful first responses instead of leaving them waiting for a reply.</p></article>
+			<article class="benefit-card"><div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#10B981" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="#10B981" stroke-width="1.6"/></svg></div><h3>Stay Consistent</h3><p>Make sure every visitor receives the same accurate, on-brand information your team has approved.</p></article>
+			<article class="benefit-card"><div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L4 6V12C4 17 7.5 20.7 12 22C16.5 20.7 20 17 20 12V6L12 2Z" stroke="#10B981" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#10B981" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Hand Off When Needed</h3><p>Route complex or sensitive conversations to a real person instead of forcing the visitor through an automated loop.</p></article>
+		</div>
+	</div></section>
+
+	<section class="deployment-section"><div class="container"><div class="deployment-layout">
+		<div class="deployment-copy"><span class="eyebrow">The Right Starting Point</span><h2>Have a Website? Start Here. No Website? Start on WhatsApp.</h2><p>A website chatbot works best when your business already has a website that visitors use. If most enquiries happen on WhatsApp, we can begin there and add a website assistant later.</p><div class="deployment-list">
+			<div class="deployment-item"><div class="deployment-item-mark">1</div><div><h3>Already have a website</h3><p>We use your approved business information to configure, test, and deploy the assistant on your site.</p></div></div>
+			<div class="deployment-item"><div class="deployment-item-mark">2</div><div><h3>No website yet</h3><p>WhatsApp automation is usually the more practical first step because customers can reach you where they already message.</p></div></div>
+		</div><p class="fit-note">We will recommend the channel that fits your current customer journey, not push you into a tool you do not need.</p></div>
+		<div class="deployment-options"><article class="deployment-card primary"><h3>Website Chat Assistant</h3><p>Ideal for businesses with website traffic, service pages, online enquiries, or visitors who need help choosing the right next step.</p><a href="#process">See how it works &#8594;</a></article><article class="deployment-card"><h3>WhatsApp Automation</h3><p>Ideal for businesses that receive most questions, bookings, and follow-ups directly through WhatsApp.</p><a href="whatsapp-automation.html">Explore WhatsApp automation &#8594;</a></article></div>
+	</div></div></section>
+
+	<section class="process-section" id="process"><div class="container"><div class="process-header"><span class="eyebrow">A Simple Process</span><h2 class="section-heading">From Your Business Knowledge to a Live Assistant</h2><p class="section-sub">We handle the technical work while you review the conversations and information your customers actually need.</p></div><div class="process-grid">
+		<article class="process-step"><div class="process-number">01</div><h3>Understand</h3><p>We learn about your services, customers, repeated questions, and the actions that matter most.</p></article>
+		<article class="process-step"><div class="process-number">02</div><h3>Prepare</h3><p>We organize your approved information and shape the assistant's tone, boundaries, and conversation paths.</p></article>
+		<article class="process-step"><div class="process-number">03</div><h3>Build and Test</h3><p>We configure the chatbot, test realistic questions, and refine responses before it reaches visitors.</p></article>
+		<article class="process-step"><div class="process-number">04</div><h3>Deploy and Support</h3><p>We add it to your website, show you how it works, and help update it as your business changes.</p></article>
+	</div></div></section>
+
+	<section class="final-cta"><div class="container"><div class="final-cta-box"><h2>Ready to Make Your Website More Helpful?</h2><p>Tell us where customers get stuck today. We will show you whether a website chatbot, WhatsApp automation, or both makes sense for your business.</p><div class="final-cta-actions"><a href="contact-us.html" class="btn btn-primary">Book a Demo</a><a href="services.html" class="btn btn-secondary">Explore Services</a></div></div></div></section>
+</main>
+
+<footer><div class="container"><div class="footer-top">
+	<div class="footer-brand"><a href="index.html" class="logo"><svg class="logo-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#10B981" fill-opacity="0.10"/><circle cx="12" cy="14" r="3.4" fill="#10B981"/><circle cx="28" cy="14" r="3.4" fill="#10B981" fill-opacity="0.55"/><circle cx="20" cy="26" r="3.4" fill="#10B981"/><path d="M12 14L20 26L28 14" stroke="#10B981" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14L28 14" stroke="#10B981" stroke-width="1.6" stroke-linecap="round" stroke-opacity="0.4"/></svg><span class="logo-text">STACK <span>AUTOMATE</span></span></a><p>Simple, friendly business automation solutions that help small businesses reply faster and never miss a customer.</p></div>
+	<div class="footer-col"><h4>Company</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="solutions.html">Solutions</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="data-deletion.html">Data Deletion Request</a></li></ul></div>
+	<div class="footer-col"><h4>Services</h4><ul><li><a href="whatsapp-automation.html">WhatsApp Automation</a></li><li><a href="chatbot-development.html">Chatbot Development</a></li><li><a href="whatsapp-marketing.html">WhatsApp Marketing</a></li></ul></div>
+	<div class="footer-col"><h4>Solutions</h4><ul><li><a href="solutions/retail-automation.html">Retail</a></li><li><a href="solutions/financial-services-automation.html">Financial Services</a></li><li><a href="solutions/healthcare-automation.html">Healthcare</a></li><li><a href="solutions/restaurants-automation.html">Restaurants</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 Stack Automate. All rights reserved.</p><div class="footer-legal"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-and-conditions.html">Terms &amp; Conditions</a></div></div></div></footer>
+
+<script src="js/main.js"></script>
+<script src="js/phone-chat.js"></script>
+<script>
+const messagesWithout = [
+	{ text: 'What services do you provide?', isReceived: true, time: '10:14 AM', auto: false },
+	{ text: 'I will wait for someone to get back to me.', isReceived: true, time: '10:15 AM', auto: false }
+];
+const messagesWith = [
+	{ text: 'What services do you provide?', isReceived: true, time: '10:14 AM', auto: false },
+	{ text: 'We help businesses with WhatsApp automation, website chat assistants, and WhatsApp marketing.', isReceived: false, time: '10:14 AM', auto: true },
+	{ text: 'I need help getting more appointment enquiries.', isReceived: true, time: '10:15 AM', auto: false },
+	{ text: 'I can help with that. What type of business do you run, and what is the best number to reach you?', isReceived: false, time: '10:15 AM', auto: true }
+];
+new ChatAnimator('canvas-without', messagesWithout, { theme: 'light' });
+new ChatAnimator('canvas-with', messagesWith, { theme: 'light' });
+</script>
+</body>
+</html>

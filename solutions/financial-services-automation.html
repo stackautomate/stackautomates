@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financial Services WhatsApp Automation &amp; Chatbots | Stack Automate</title>
+<meta name="description" content="Automate loan status, account, insurance, and appointment replies with WhatsApp automation and secure website chatbots.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/phone-chat.css">
+<link rel="stylesheet" href="../css/whatsapp.css">
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <a href="../index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none">
+        <rect width="40" height="40" rx="10" fill="#10B981" fill-opacity="0.10"/>
+        <circle cx="12" cy="14" r="3.4" fill="#10B981"/>
+        <circle cx="28" cy="14" r="3.4" fill="#10B981" fill-opacity="0.55"/>
+        <circle cx="20" cy="26" r="3.4" fill="#10B981"/>
+        <path d="M12 14L20 26L28 14" stroke="#10B981" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 14L28 14" stroke="#10B981" stroke-width="1.6" stroke-linecap="round" stroke-opacity="0.4"/>
+      </svg>
+      <span class="logo-text">STACK <span>AUTOMATE</span></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <div class="nav-dropdown">
+        <a href="../services.html" class="nav-dropdown-toggle">Services</a>
+        <div class="nav-dropdown-menu">
+          <a href="../whatsapp-automation.html">WhatsApp Automation</a>
+          <a href="../chatbot-development.html">Chatbot Development</a>
+          <a href="../whatsapp-marketing.html">WhatsApp Marketing</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="../solutions.html" class="nav-dropdown-toggle">Solutions</a>
+        <div class="nav-dropdown-menu">
+          <a href="retail-automation.html">Retail</a>
+          <a href="financial-services-automation.html">Financial Services</a>
+          <a href="healthcare-automation.html">Healthcare</a>
+          <a href="restaurants-automation.html">Restaurants</a>
+        </div>
+      </div>
+      <a href="../contact.html">Contact</a>
+      <div class="mobile-menu-items">
+        <a href="../book-demo.html" class="btn btn-primary">Book a Demo</a>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a href="../book-demo.html" class="btn btn-primary">Book a Demo</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="breadcrumb">
+  <div class="container">
+    <a href="../index.html">Home</a> <span>/</span> <a href="../solutions.html">Solutions</a> <span>/</span> <span>Financial Services</span>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <span class="eyebrow">Financial Services WhatsApp Automation &amp; Chatbots</span>
+        <h1>Answer Every Client Query <span class="highlight">Instantly and Securely</span></h1>
+        <p class="lead">Automate replies for loan status, account balance queries, policy renewals, and appointment scheduling — so your clients get quick answers, and your team focuses on advising, not repeating.</p>
+        <div class="hero-actions">
+          <a href="#comparison" class="btn btn-primary">See Demo</a>
+          <a href="../book-demo.html" class="btn btn-secondary">Book a Demo</a>
+        </div>
+        <div class="channel-note">
+          <p>Runs on <a href="../whatsapp-automation.html">WhatsApp</a>, as a <a href="../chatbot-development.html">website chatbot</a>, or both — depending on where your clients already reach out.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="comparison-section" id="comparison">
+  <div class="container">
+    <h2>See the Difference in Action</h2>
+    <div class="phone-comparison">
+      <div class="phone-container">
+        <div class="phone-label without">❌ Without Automation</div>
+        <div class="phone-mock">
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <div class="phone-status"><span>11:05</span><span>●●●●●</span></div>
+              <div class="phone-header">
+                <div class="phone-avatar">🏦</div>
+                <div class="phone-header-text"><p class="name">Advisor Desk</p><p class="status">offline</p></div>
+              </div>
+              <div class="phone-body">
+                <canvas id="canvas-without"></canvas>
+              </div>
+              <div class="phone-footer">
+                <div class="phone-input-box">Type message...</div>
+                <div class="phone-send-btn">➤</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="phone-container">
+        <div class="phone-label with">✅ With Automation</div>
+        <div class="phone-mock">
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <div class="phone-status"><span>11:05</span><span>●●●●●</span></div>
+              <div class="phone-header">
+                <div class="phone-avatar">🏦</div>
+                <div class="phone-header-text"><p class="name">Advisor Desk</p><p class="status">online</p></div>
+              </div>
+              <div class="phone-body">
+                <canvas id="canvas-with"></canvas>
+              </div>
+              <div class="phone-footer">
+                <div class="phone-input-box">Type message...</div>
+                <div class="phone-send-btn">➤</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="benefits-section">
+  <div class="container">
+    <div class="benefits-header">
+      <span class="eyebrow">Financial Services Features</span>
+      <h2 class="section-heading">Built for Advisors, Agents, and Lenders</h2>
+      <p class="section-sub">Automation designed around the questions your clients ask most — loan status, policy details, account queries, and appointment scheduling.</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="13" rx="2" stroke="#10B981" stroke-width="1.6"/><path d="M3 10H21" stroke="#10B981" stroke-width="1.6"/><circle cx="7" cy="14.5" r="1" fill="#10B981"/></svg></div>
+        <h3>Loan Status Updates</h3>
+        <p>"Has my loan been approved?" answered instantly with the current stage — no need to call and wait on hold.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21C12 21 4 15.5 4 9.5C4 6.5 6.2 4.5 8.8 4.5C10.4 4.5 11.5 5.3 12 6.2C12.5 5.3 13.6 4.5 15.2 4.5C17.8 4.5 20 6.5 20 9.5C20 15.5 12 21 12 21Z" stroke="#10B981" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+        <h3>Policy Renewal Reminders</h3>
+        <p>Automatic reminders before a policy expires, with renewal steps included — fewer lapsed policies, less follow-up work.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#10B981" stroke-width="1.6"/><path d="M12 6v6l4 2.4" stroke="#10B981" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <h3>Appointment Scheduling</h3>
+        <p>Clients book a consultation slot directly through chat, with automatic confirmation and reminders.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#10B981" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="#10B981" stroke-width="1.6"/></svg></div>
+        <h3>Document Checklist Sharing</h3>
+        <p>"What documents do I need for a loan application?" gets an instant checklist, avoiding repeated back-and-forth.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" stroke="#10B981" stroke-width="1.6"/><path d="M8 12H16M12 8V16" stroke="#10B981" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <h3>EMI and Payment Reminders</h3>
+        <p>Automatic reminders sent a few days before an EMI or premium is due, reducing missed payments and follow-up calls.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L4 6V12C4 17 7.5 20.7 12 22C16.5 20.7 20 17 20 12V6L12 2Z" stroke="#10B981" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+        <h3>Secure Handoff to Your Team</h3>
+        <p>For sensitive requests, the automation smoothly hands the chat to a real advisor — with full context, no repeating.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tech-stack-section">
+  <div class="container">
+    <div class="tech-stack-header">
+      <span class="eyebrow">Flexible Deployment</span>
+      <h2 class="section-heading">Available on Your Preferred Channel</h2>
+      <p class="section-sub">Already active on WhatsApp? Prefer a chatbot on your website? Or want both? We adapt to your existing setup.</p>
+    </div>
+    <div class="tech-stack-grid">
+      <div class="tech-card">
+        <h3>💬 WhatsApp Automation</h3>
+        <p>Ideal if your clients already message you on WhatsApp for loan queries, policy questions, or appointment requests.</p>
+        <a href="../whatsapp-automation.html" class="tech-link">Learn more →</a>
+      </div>
+      <div class="tech-card">
+        <h3>🤖 Website Chatbot</h3>
+        <p>Ideal if you want automated replies directly on your website or client portal, without relying on WhatsApp.</p>
+        <a href="../chatbot-development.html" class="tech-link">Learn more →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <div class="final-cta-box">
+      <h2>Ready to Automate Client Communication?</h2>
+      <p>Give clients instant answers on loan status, policy details, and appointments — while your team focuses on advising, not repeating the same information.</p>
+      <div class="final-cta-actions">
+        <a href="../book-demo.html" class="btn btn-primary">Book a Demo</a>
+        <a href="../contact.html" class="btn btn-secondary">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo">
+          <svg class="logo-mark" viewBox="0 0 40 40" fill="none">
+            <rect width="40" height="40" rx="10" fill="#10B981" fill-opacity="0.10"/>
+            <circle cx="12" cy="14" r="3.4" fill="#10B981"/>
+            <circle cx="28" cy="14" r="3.4" fill="#10B981" fill-opacity="0.55"/>
+            <circle cx="20" cy="26" r="3.4" fill="#10B981"/>
+            <path d="M12 14L20 26L28 14" stroke="#10B981" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 14L28 14" stroke="#10B981" stroke-width="1.6" stroke-linecap="round" stroke-opacity="0.4"/>
+          </svg>
+          <span class="logo-text">STACK <span>AUTOMATE</span></span>
+        </a>
+        <p>Simple, friendly business automation solutions that help small businesses reply faster and never miss a customer.</p>
+        <div class="social-row">
+          <a href="https://facebook.com/stackautomates" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M15 8.5H17V5.5H15C13.3 5.5 12 6.8 12 8.5V10.5H10V13.5H12V19H15V13.5H17L17.5 10.5H15V8.5Z" fill="#F3F4F6"/></svg>
+          </a>
+          <a href="https://x.com/stackautomates" target="_blank" rel="noopener" aria-label="X (Twitter)">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 5L19 19M19 5L5 19" stroke="#F3F4F6" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </a>
+          <a href="https://instagram.com/stackautomates" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="5" stroke="#F3F4F6" stroke-width="1.6"/><circle cx="12" cy="12" r="3.4" stroke="#F3F4F6" stroke-width="1.6"/><circle cx="16.8" cy="7.2" r="1" fill="#F3F4F6"/></svg>
+          </a>
+          <a href="https://linkedin.com/company/stackautomates" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" stroke="#F3F4F6" stroke-width="1.6"/><circle cx="8.2" cy="8.5" r="1.1" fill="#F3F4F6"/><path d="M8.2 11V17M12 17V13.5C12 12.4 12.8 11.5 14 11.5C15.2 11.5 16 12.4 16 13.5V17" stroke="#F3F4F6" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../solutions.html">Solutions</a></li>
+          <li><a href="../contact.html">Contact Us</a></li><li><a href="../privacy-policy.html">Privacy Policy</a></li><li><a href="../data-deletion.html">Data Deletion Request</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../whatsapp-automation.html">WhatsApp Automation</a></li>
+          <li><a href="../chatbot-development.html">Chatbot Development</a></li>
+          <li><a href="../whatsapp-marketing.html">WhatsApp Marketing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="retail-automation.html">Retail</a></li>
+          <li><a href="financial-services-automation.html">Financial Services</a></li>
+          <li><a href="healthcare-automation.html">Healthcare</a></li>
+          <li><a href="restaurants-automation.html">Restaurants</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Stack Automate. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="../privacy-policy.html">Privacy Policy</a>
+        <a href="../terms-and-conditions.html">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script src="../js/phone-chat.js"></script>
+<script>
+const messagesWithout = [
+  { text: 'Has my loan application been approved yet?', isReceived: true, time: '11:02 AM', auto: false },
+  { text: 'Still waiting, please respond', isReceived: true, time: '1:45 PM', auto: false }
+];
+
+const messagesWith = [
+  { text: 'Has my loan application been approved yet?', isReceived: true, time: '11:02 AM', auto: false },
+  { text: 'Your application is currently under document verification. Expected update in 2 working days.', isReceived: false, time: '11:02 AM', auto: true },
+  { text: 'Okay, what documents are still pending?', isReceived: true, time: '11:04 AM', auto: false },
+  { text: 'We need your latest salary slip and address proof. You can share them here directly.', isReceived: false, time: '11:04 AM', auto: true },
+  { text: 'Sending them now, thank you', isReceived: true, time: '11:06 AM', auto: false }
+];
+
+new ChatAnimator('canvas-without', messagesWithout, { theme: 'light' });
+new ChatAnimator('canvas-with', messagesWith, { theme: 'light' });
+</script>
+</body>
+</html>

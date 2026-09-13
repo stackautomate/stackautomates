@@ -1,0 +1,38 @@
+.comparison-section{padding:48px 0 96px}
+.comparison-section h2{text-align:center;font-size:clamp(28px,3.6vw,42px);margin-bottom:36px}
+.phone-comparison{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;width:100%;max-width:900px;margin:0 auto}
+.phone-container{display:flex;flex-direction:column;align-items:center}
+.phone-label{text-align:center;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:20px;padding:10px 16px;border-radius:8px;color:var(--text)}
+.phone-label.without{background:rgba(239,68,68,0.12);color:#EF4444}
+.phone-label.with{background:rgba(16,185,129,0.12);color:#10B981}
+.phone-mock{width:100%;max-width:340px;margin:0 auto}
+.phone-frame{background:#0d1420;border:1px solid var(--border);border-radius:36px;padding:14px;box-shadow:0 40px 100px rgba(0,0,0,0.5);position:relative}
+.phone-frame::before{display:none}
+.phone-screen{background:#f5f5f5;border-radius:24px;overflow:hidden;min-height:480px;display:flex;flex-direction:column;color:#000}
+.phone-status{background:#fff;padding:6px 12px;display:flex;justify-content:space-between;font-size:11px;border-bottom:1px solid #e5e5e5;font-weight:600}
+.phone-header{background:#25D366;padding:16px 18px;display:flex;align-items:center;gap:12px}
+.phone-avatar{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;font-size:16px;color:white}
+.phone-header-text{flex:1}
+.phone-header-text .name{font-size:14px;font-weight:700;color:white;margin:0}
+.phone-header-text .status{font-size:11.5px;color:rgba(255,255,255,0.8);margin:2px 0 0 0}
+.phone-body{flex:1;padding:0;display:flex;flex-direction:column;background:#fff;overflow:hidden;position:relative}
+.phone-body canvas{display:block;width:100%;height:100%}
+.phone-footer{padding:14px;background:white;border-top:1px solid #e5e5e5;display:flex;gap:10px;flex-shrink:0}
+.phone-input-box{flex:1;background:#e5e5ea;border-radius:20px;padding:10px 16px;font-size:12.5px;color:#999;display:flex;align-items:center}
+.phone-send-btn{width:36px;height:36px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;color:white;font-size:14px;flex-shrink:0}
+.whatsapp-icon-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(16,185,129,0.08);border:1px solid var(--border);padding:12px 18px;border-radius:10px;margin-bottom:24px;width:fit-content;margin-left:auto;margin-right:auto}
+.whatsapp-icon{width:32px;height:32px;background:#25D366;border-radius:6px;display:flex;align-items:center;justify-content:center}
+.whatsapp-icon svg{width:18px;height:18px}
+.whatsapp-icon-badge span{font-size:14px;font-weight:600;color:var(--text)}
+
+@media(max-width:900px){
+.phone-comparison{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+.phone-comparison{gap:20px}
+}
+@media(max-width:480px){
+.phone-comparison{gap:12px}
+.phone-status{font-size:9px}
+.phone-label{font-size:12px;margin-bottom:16px;padding:8px 12px}
+}
