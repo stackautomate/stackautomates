@@ -287,7 +287,13 @@ observer.observe(challengeTags, { childList: true, subtree: true });
 demoForm.addEventListener('submit', (event) => {
 	event.preventDefault();
 	const formData = new FormData(demoForm);
-	const internationalNumber = iti.getNumber().replace(/\D/g, '');
+	// sta Ultimate Fix: Fallback check inputs to ensure number is NEVER blank
+let internationalNumber = iti.getNumber().replace(/\D/g, '');
+if (!internationalNumber) {
+    const rawInput = phoneNumber.value.replace(/\D/g, '');
+    const dialCode = iti.getSelectedCountryData().dialCode || '91';
+    internationalNumber = dialCode + rawInput;
+}
 	const selectedChallenges = [...challengeOptions].filter(option => option.checked).map(option => option.value);
 	formData.delete('challenge');
 	formData.delete('challenge_option');
